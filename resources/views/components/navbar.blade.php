@@ -10,7 +10,23 @@
                 <li class="nav-item">
                     <a href="{{route('homepage')}}" class="nav-link">Home</a>
                 </li>
+                <li class="nav-item">
+                    <a href=" {{route('article.index')}}" class="nav-link" aria-current="page">Tutti gli articoli</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
+                    <ul class="dropdown-menu">
+                        @foreach ($categories as $category)
+                            <li><a href="{{route('byCategory', ['category' => $category])}}" class="dropdown-item text-capitalize">{{$category->name}}</a>
+                            </li>
+                            @if (!$loop->last)
+                                <hr class="dropdown-divider">
+                            @endif
+                        @endforeach
+                    </ul>
+                </li>
                 @auth
+                
                     <li class="nav-item">
                         <a href="{{route('create.article')}}" class="nav-link">Crea Articolo</a>
                     </li>
