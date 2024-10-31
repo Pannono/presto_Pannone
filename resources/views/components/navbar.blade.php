@@ -68,6 +68,9 @@
                     </button>
                 </div>
             </form>
+            <x-_locale lang="it" />
+            <x-_locale lang="en" />
+            <x-_locale lang="es" />
         </div>        
     </div>
 

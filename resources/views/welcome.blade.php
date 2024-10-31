@@ -5,7 +5,7 @@
                 <h1 class="display-4">Presto.it</h1>
                 <div class="my-3">
                     @auth
-                        <a href="{{route('create.article')}}" class="btn btn-dark">Pubblica un articolo</a>
+                        <a href="{{route('create.article')}}" class="btn btn-dark">{{__('ui.create_article')}}</a>
                     @endauth
                 </div>
             </div>
