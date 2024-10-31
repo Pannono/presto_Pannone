@@ -16,4 +16,10 @@ class PublicController extends Controller
         $articles = Article::orderBy('created_at', 'desc')->paginate(6);
         return view('article.index', compact('articles'));
     }
+
+    public function searchArticles(Request $request){
+        $query = $request->input('query');
+        $articles = Article::search($query)->where('is_accepted', true)->paginate(10);
+        return view('article.searched', ['articles' => $articles, 'query' => $query]);
+    }
 }

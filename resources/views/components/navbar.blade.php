@@ -60,6 +60,14 @@
                     </li>
                 @endauth
             </ul>
+            <form action="{{route('article.search')}}" method="GET" role="search" class="d-flex ms-auto">
+                <div class="input-group">
+                    <input type="search" name="query" class="form-control" placeholder="Cerca..." aria-label="search">
+                    <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
+                        Search
+                    </button>
+                </div>
+            </form>
         </div>        
     </div>
 
