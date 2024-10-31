@@ -11,7 +11,7 @@
             <form action="{{route('login')}}" method="POST" class="bg-secondary-subtle shadow rounded p-5">
                 @csrf
                 <div class="mb-3">
-                    <label for="loginEmail" class="form-label">Email</label>Indirizzo email</label>
+                    <label for="loginEmail" class="form-label"></label>Indirizzo email</label>
                     <input type="email" class="form-control" id="loginEmail" name="email">
                 </div>
                 <div class="mb-3">

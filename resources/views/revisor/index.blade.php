@@ -14,7 +14,7 @@
                 </div>
             </div>
         @endif
-        @if ($articles_to_check)
+        @if ($article_to_check)
             <div class="row justify-content-center pt-5">
                 <div class="col-md-8">
                     <div class="row justify-content-center">
