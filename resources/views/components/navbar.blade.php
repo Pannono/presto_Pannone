@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-t">
     <div class="container-fluid">
-        <a href="{{route('homepage')}}" class="navbar-brand">Presto.it</a>
+        <a href="{{route('homepage')}}" class="navbar-brand text-white">Presto.it</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,13 +8,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="{{route('homepage')}}" class="nav-link">Home</a>
+                    <a href="{{route('homepage')}}" class="nav-link text-white">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href=" {{route('article.index')}}" class="nav-link" aria-current="page">Tutti gli articoli</a>
+                    <a href=" {{route('article.index')}}" class="nav-link text-white" aria-current="page">Tutti gli articoli</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
+                    <a href="#" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                             <li><a href="{{route('byCategory', ['category' => $category])}}" class="dropdown-item text-capitalize">{{$category->name}}</a>
@@ -28,16 +28,16 @@
                 @auth
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
-                            <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25">Zona revisore
+                            <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25 text-white">Zona revisore
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}</span>
                             </a>
                         </li>
                     @endif
                     <li class="nav-item">
-                        <a href="{{route('create.article')}}" class="nav-link">Crea Articolo</a>
+                        <a href="{{route('create.article')}}" class="nav-link text-white">Crea Articolo</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Ciao, {{Auth::user()->name}}
                         </a>
                         <ul class="dropdown-menu">
@@ -49,7 +49,7 @@
                     </li>
                 @else
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Ciao, utente!
                         </a>
                         <ul class="dropdown-menu">
